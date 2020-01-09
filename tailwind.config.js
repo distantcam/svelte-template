@@ -1,7 +1,10 @@
 module.exports = {
 	theme: {
 		extend: {
-			maxWidth: { none: 'none' },
+			maxWidth: {
+				none: 'none',
+				'2xs': '16rem',
+			},
 		},
 	},
 	variants: {},

@@ -2,7 +2,7 @@
   export let name;
 </script>
 
-<main class="text-center p-4 mx-auto my-0 max-w-xs sm:max-w-none">
+<main class="p-4 mx-auto text-center max-w-2xs sm:max-w-none">
   <h1 class="text-6xl font-hairline text-pink-600 uppercase">Hello {name}!</h1>
   <p>
     Visit the
