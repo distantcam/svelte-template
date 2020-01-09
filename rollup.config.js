@@ -5,6 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
+import clear from 'rollup-plugin-clear';
 
 const production = !process.env.ROLLUP_WATCH || process.env.PRODUCTION;
 
@@ -17,6 +18,10 @@ export default {
 		file: 'public/bundle.js',
 	},
 	plugins: [
+		clear({
+			targets: ['public'],
+		}),
+
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
@@ -62,9 +67,6 @@ export default {
 		// instead of npm run dev), minify
 		production && terser(),
 	],
-	watch: {
-		clearScreen: false,
-	},
 };
 
 function serve() {
