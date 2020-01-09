@@ -30,6 +30,7 @@ module.exports = {
 				ignoreTemplateLiterals: true,
 			},
 		],
+		'arrow-parens': 'as-needed',
 
 		// These are svelte specific
 		'import/no-mutable-exports': 'off',
